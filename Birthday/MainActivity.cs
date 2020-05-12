@@ -36,14 +36,28 @@ namespace Birthday
             led = new LedFragment();
             led.LedSelection += Led_LedSelection;
             led.SingleLedSelection += Led_SingleLedSelection;
+            led.DelaySelected += Led_DelaySelected;
 
             music = new MusicFragment();
+            music.MusicSelected += Music_MusicSelected;
 
             navigation = FindViewById<BottomNavigationView>(Resource.Id.navigation);
             navigation.NavigationItemSelected += Navigation_NavigationItemSelected;
             SupportFragmentManager.BeginTransaction()
                 .Replace(Resource.Id.content_frame, connect)
                 .Commit();
+        }
+
+        private void Led_DelaySelected(object sender, EventArgs e)
+        {
+            Enum.TryParse(sender.ToString(), out Delay val);
+            connectionService?.WriteToSocket((int)val);
+        }
+
+        private void Music_MusicSelected(object sender, EventArgs e)
+        {
+            Enum.TryParse(sender.ToString(), out Music val);
+            connectionService?.WriteToSocket((int)val);
         }
 
         private void Led_SingleLedSelection(object sender, EventArgs e)

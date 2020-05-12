@@ -92,6 +92,7 @@ namespace Birthday
 
             
             socket.OutputStream.WriteByte(Convert.ToByte(number));
+            Thread.Sleep(10);
         }
     }
 }

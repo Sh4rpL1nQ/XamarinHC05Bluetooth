@@ -23,18 +23,20 @@ namespace Birthday
         Zufällig = 20
     }
 
-    //public enum LedPin
-    //{
-    //    Y1_13 = 13,
-    //    R1_12 = 12,
-    //    G1_11 = 11,
-    //    Y2_10 = 10,
-    //    R2_9 = 9,
-    //    G2_8 = 8,
-    //    Y3_7 = 7,
-    //    R3_6 = 6,
-    //    G3_5 = 5,
-    //    Y4_4 = 4,
-    //    R4_3 = 3
-    //}
+    public enum Delay
+    {
+        Epilepsie = 21,
+        Schnell = 50,
+        Mittel = 90,
+        Langsam = 140
+    }
+
+    public enum Music
+    {
+        Cantina = 22,
+        Imperial = 23,
+        Mario = 24,
+        Hedwig = 25,
+        Birthday = 26
+    }
 }

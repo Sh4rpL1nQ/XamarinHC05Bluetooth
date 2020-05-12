@@ -16,8 +16,9 @@ namespace Birthday
     public class LedFragment : Fragment
     {
         private Spinner spinner;
-        private SeekBar seekbar;
+        private ListView delay;
         private List<LedType> list;
+        private List<Delay> delayList;
 
         #region LedButtons
         private ToggleButton btnThirteen;
@@ -43,7 +44,8 @@ namespace Birthday
             var view = inflater.Inflate(Resource.Layout.fragment_led, container, false);
 
             spinner = view.FindViewById<Spinner>(Resource.Id.spinner);
-            seekbar = view.FindViewById<SeekBar>(Resource.Id.seek_bar);
+
+            delay = view.FindViewById<ListView>(Resource.Id.delay_selection);
 
             #region LedButtons
             btnThirteen = view.FindViewById<ToggleButton>(Resource.Id.led_thirteen);
@@ -72,13 +74,26 @@ namespace Birthday
             #endregion
 
             list = new List<LedType>();
+            delayList = new List<Delay>();
+            foreach (Delay delayType in Enum.GetValues(typeof(Delay)))
+                delayList.Add(delayType);
+
+            
             foreach (LedType ledType in Enum.GetValues(typeof(LedType)))
                 list.Add(ledType);
 
             spinner.Adapter = new ArrayAdapter(Context, Resource.Layout.support_simple_spinner_dropdown_item, list);
             spinner.ItemSelected += Spinner_ItemSelected;
 
+            delay.Adapter = new ArrayAdapter(Context, Resource.Layout.support_simple_spinner_dropdown_item, delayList);
+            delay.ItemClick += Delay_ItemClick;
+
             return view;
+        }
+
+        private void Delay_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            DelaySelected?.Invoke(delay.GetItemAtPosition(e.Position), new EventArgs());
         }
 
         private void BtnSingleLed_Click(object sender, EventArgs e)
@@ -125,5 +140,7 @@ namespace Birthday
         public event EventHandler LedSelection;
 
         public event EventHandler SingleLedSelection;
+
+        public event EventHandler DelaySelected;
     }
 }

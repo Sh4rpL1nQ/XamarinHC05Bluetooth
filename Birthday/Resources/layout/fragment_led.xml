@@ -19,25 +19,15 @@
             android:layout_marginBottom="@dimen/basic_margin"
             android:layout_toRightOf="@+id/linear_layout_left"/>
 
-        <LinearLayout
-            android:layout_below="@+id/spinner"
-            android:layout_marginRight="@dimen/basic_margin"
+        <ListView
+            android:id="@+id/delay_selection"
             android:layout_toRightOf="@+id/linear_layout_left"
-            android:layout_above="@+id/linear_layout_bottom"
+            android:layout_below="@+id/spinner"
+            android:layout_above="@id/linear_layout_bottom"
+            android:layout_marginBottom="@dimen/basic_margin"
+            android:layout_marginRight="@dimen/basic_margin"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-        
-            <SeekBar  
-                android:id="@+id/seek_bar"
-                android:backgroundTint="@android:color/holo_red_dark"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"               
-                android:rotation="270"
-                android:progressDrawable="@drawable/seek_bar"
-                android:thumb="@drawable/seek_thumb"
-                android:layout_weight="8"/>
-            </LinearLayout>
+            android:layout_height="match_parent"/>
     
         <LinearLayout
             android:id="@+id/linear_layout_left"
@@ -145,7 +135,6 @@
             android:orientation="horizontal"
             android:layout_alignParentBottom="true"
             android:layout_marginRight="@dimen/basic_margin"
-            android:layout_marginLeft="@dimen/basic_margin"
             android:layout_marginBottom="@dimen/basic_margin"
             android:layout_toRightOf="@+id/linear_layout_left">           
 
