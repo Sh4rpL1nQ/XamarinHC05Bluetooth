@@ -1,0 +1,120 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Spinner
+            android:id="@+id/spinner"
+              android:layout_width="match_parent"
+              android:layout_height="50dp"
+            android:layout_marginTop="@dimen/basic_margin"
+            android:layout_marginRight="@dimen/basic_margin"
+            android:layout_marginBottom="@dimen/basic_margin"
+            android:layout_toRightOf="@+id/linear_layout_left"/>
+
+        <LinearLayout
+            android:layout_below="@+id/spinner"
+            android:layout_marginRight="@dimen/basic_margin"
+            android:layout_toRightOf="@+id/linear_layout_left"
+            android:layout_above="@+id/linear_layout_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+        
+            <SeekBar  
+                android:id="@+id/seek_bar"
+                android:backgroundTint="@android:color/holo_red_dark"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"               
+                android:rotation="270"
+                android:progressDrawable="@drawable/seek_bar"
+                android:thumb="@drawable/seek_thumb"
+                android:layout_weight="8"/>
+            </LinearLayout>
+    
+        <LinearLayout
+            android:id="@+id/linear_layout_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/basic_margin"
+            android:layout_marginLeft="@dimen/basic_margin"
+            android:layout_marginRight="@dimen/basic_margin"
+            android:layout_above="@+id/linear_layout_bottom">
+            
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/round_toggle_red"/>
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/basic_margin">
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

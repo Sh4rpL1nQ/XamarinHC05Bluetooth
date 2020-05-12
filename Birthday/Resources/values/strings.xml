@@ -1,0 +1,12 @@
+<resources>
+  <string name="app_name">Lauras Geschenk</string>
+  <string name="title_led_tab">LEDs</string>
+  <string name="title_music_tab">Musik</string>
+
+  <string name="btn_device_search">Verbinden</string>
+  <string name="btn_bluetooth_off">Aus</string>
+  <string name="btn_bluetooth_on">An</string>
+  <string name="error_no_bluetooth">Das Gerät hat kein Bluetooth</string>
+  <string name="msg_bluetooth_activated">Bluetooth wurde aktiviert</string>
+  <string name="msg_bluetooth_closed">Bluetooth wurde deaktiviert</string>
+</resources>

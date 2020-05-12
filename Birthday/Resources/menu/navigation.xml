@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <item
+        android:id="@+id/navigation_connection_tab"
+        android:icon="@drawable/connection"
+        android:title="Verbindung" />
+  
+    <item
+        android:id="@+id/navigation_led_tab"
+        android:icon="@drawable/led"
+        android:title="@string/title_led_tab" 
+android:enabled="false"/>
+
+    <item
+        android:id="@+id/navigation_music_tab"
+        android:icon="@drawable/music"
+        android:title="@string/title_music_tab" 
+android:enabled="false"/>
+
+</menu>
