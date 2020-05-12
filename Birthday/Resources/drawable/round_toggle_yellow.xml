@@ -1,20 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-
+  
   <item
-      android:drawable="@drawable/led_red_disabled"
+      android:drawable="@drawable/led_yellow_disabled"
       android:state_enabled="false"
         />
-
+  
   <item
-      android:drawable="@drawable/led_red_off"
+      android:drawable="@drawable/led_yellow_off"
       android:state_checked="false"
         />
 
-  
-
 <item
-      android:drawable="@drawable/led_red_on"
+      android:drawable="@drawable/led_yellow_on"
       android:state_checked="true"
         />
 </selector>

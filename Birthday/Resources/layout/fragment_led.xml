@@ -1,5 +1,7 @@
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res/com.birthday.android.ResizableButton"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -43,46 +45,96 @@
             android:layout_height="match_parent"
             android:layout_alignParentLeft="true"
             android:orientation="vertical"
-            android:layout_marginTop="@dimen/basic_margin"
-            android:layout_marginLeft="@dimen/basic_margin"
-            android:layout_marginRight="@dimen/basic_margin"
-            android:layout_above="@+id/linear_layout_bottom">
+            android:layout_margin="@dimen/basic_margin">
             
-            <ToggleButton
+            <Birthday.ResizableButtonWidth
+                android:id="@+id/led_thirteen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textOff="13"
+                android:textOn="13"
+                android:layout_margin="5dp"
+                android:textColor="@android:color/transparent"
+                android:background="@drawable/round_toggle_yellow"
+                />
+
+            <Birthday.ResizableButtonWidth
+                android:id="@+id/led_twelve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOff="12"
+                android:textOn="12"
+                android:textColor="@android:color/transparent"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/round_toggle_red"/>
+
+            <Birthday.ResizableButtonWidth
+                android:id="@+id/led_eleven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOff="11"
+                android:textOn="11"
+                android:layout_margin="5dp"
+                android:textColor="@android:color/transparent"
+                android:layout_weight="1"
+                android:background="@drawable/round_toggle_green"/>
+
+            <Birthday.ResizableButtonWidth
+                android:id="@+id/led_ten"
+                android:textOff="10"
+                android:textOn="10"
+                android:layout_margin="5dp"
+                android:textColor="@android:color/transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/round_toggle_yellow"/>
+
+            <Birthday.ResizableButtonWidth
+                android:id="@+id/led_nine"
+                android:textOff="9"
+                android:textOn="9"
+                android:layout_margin="5dp"
+                android:textColor="@android:color/transparent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/round_toggle_red"/>
 
-            <ToggleButton
+            <Birthday.ResizableButtonWidth
+                android:id="@+id/led_eight"
+                android:textOff="8"
+                android:textOn="8"
+                android:layout_margin="5dp"
+                android:textColor="@android:color/transparent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/round_toggle_green"
                 android:layout_weight="1"/>
 
-            <ToggleButton
+            <Birthday.ResizableButtonWidth
+                android:id="@+id/led_seven"
+                android:textOff="7"
+                android:textOn="7"
+                android:layout_margin="5dp"
+                android:textColor="@android:color/transparent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"/>
+                android:layout_weight="1" 
+                android:background="@drawable/round_toggle_yellow"/>
 
-            <ToggleButton
+            <Birthday.ResizableButtonWidth
+                android:id="@+id/led_six"
+                android:textOff="6"
+                android:textOn="6"
+                android:layout_margin="5dp"
+                android:textColor="@android:color/transparent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"/>
-
-            <ToggleButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"/>
-
-            <ToggleButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"/>
-
-            <ToggleButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:background="@drawable/round_toggle_red"/>
 
         </LinearLayout>
 
@@ -92,27 +144,51 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_alignParentBottom="true"
-            android:layout_margin="@dimen/basic_margin">
+            android:layout_marginRight="@dimen/basic_margin"
+            android:layout_marginLeft="@dimen/basic_margin"
+            android:layout_marginBottom="@dimen/basic_margin"
+            android:layout_toRightOf="@+id/linear_layout_left">           
 
-            <ToggleButton
+            <Birthday.ResizableButtonHeight
+                android:id="@+id/led_five"
+                android:textOff="5"
+                android:textOn="5"
+                android:layout_margin="5dp"
+                android:textColor="@android:color/transparent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"/>
-
-            <ToggleButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:background="@drawable/round_toggle_green"
                 android:layout_weight="1" />
 
-            <ToggleButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"/>
 
-            <ToggleButton
+            <Birthday.ResizableButtonHeight
+                android:id="@+id/led_four"
+                android:textOff="4"
+                android:textOn="4"
+                android:layout_margin="5dp"
+                android:textColor="@android:color/transparent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1" 
+                android:background="@drawable/round_toggle_yellow"/>
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"/>
+
+            <Birthday.ResizableButtonHeight
+                android:id="@+id/led_three"
+                android:textOff="3"
+                android:textOn="3"
+                android:layout_margin="5dp"
+                android:textColor="@android:color/transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" 
+                android:background="@drawable/round_toggle_red"/>
         </LinearLayout>
 
     </RelativeLayout>

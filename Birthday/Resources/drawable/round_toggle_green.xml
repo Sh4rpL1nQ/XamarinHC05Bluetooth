@@ -2,19 +2,16 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
   <item
-      android:drawable="@drawable/led_red_disabled"
+      android:drawable="@drawable/led_green_disabled"
       android:state_enabled="false"
         />
-
+  
   <item
-      android:drawable="@drawable/led_red_off"
+      android:drawable="@drawable/led_green_off"
       android:state_checked="false"
         />
-
-  
-
-<item
-      android:drawable="@drawable/led_red_on"
-      android:state_checked="true"
+  <item
+        android:drawable="@drawable/led_green_on"
+        android:state_checked="true"
         />
 </selector>

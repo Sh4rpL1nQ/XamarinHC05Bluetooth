@@ -59,7 +59,39 @@ namespace Birthday
 
         private void Listener()
         {
+            //byte[] read = new byte[1];
+            //while (true)
+            //{
 
+            //    //thisTime = DateTime.Now;
+
+
+            //    try
+            //    {
+
+            //        socket.InputStream.Read(read, 0, 1);
+            //        socket.InputStream.Close();
+
+            //        SignalReceived(read, new EventArgs());
+            //    }
+            //    catch { }
+            //    finally
+            //    {
+            //        socket.InputStream.Close();
+            //    }
+
+            //}
+        }
+
+        public event EventHandler SignalReceived;
+
+        public void WriteToSocket(int number)
+        {
+            if (!socket.IsConnected)
+                return;
+
+            
+            socket.OutputStream.WriteByte(Convert.ToByte(number));
         }
     }
 }

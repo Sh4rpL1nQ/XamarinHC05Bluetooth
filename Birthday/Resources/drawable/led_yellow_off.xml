@@ -3,7 +3,7 @@
   <!-- Overlap the left, top and right border using background color  -->
   <item>
     <shape android:shape="oval">
-      <solid android:color="#b1113e"/>
+      <solid android:color="#F9E800"/>
     </shape>
   </item>
 </layer-list>

@@ -92,7 +92,7 @@ namespace Birthday
         private void DeviceReceiver_DeviceFound(object sender, EventArgs e)
         {
             var device = sender as BluetoothDevice;
-            if (device.Name.Equals("HC-06"))
+            if (device.Name != null && device.Name.Equals("HC-06"))
             {
                 if (device.BondState == Bond.Bonded)
                     EstablishConnection(device);

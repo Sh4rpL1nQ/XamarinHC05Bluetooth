@@ -35,6 +35,7 @@ namespace Birthday
 
             led = new LedFragment();
             led.LedSelection += Led_LedSelection;
+            led.SingleLedSelection += Led_SingleLedSelection;
 
             music = new MusicFragment();
 
@@ -45,10 +46,31 @@ namespace Birthday
                 .Commit();
         }
 
+        private void Led_SingleLedSelection(object sender, EventArgs e)
+        {
+            int.TryParse(sender.ToString(), out int val);
+            connectionService?.WriteToSocket(val);
+        }
+
         private void Led_LedSelection(object sender, EventArgs e)
         {
-            var ledType = (LedType) sender;
+            Enum.TryParse(sender.ToString(), out LedType ledType);
+            connectionService?.WriteToSocket((int)ledType);
 
+            if (ledType == LedType.Aus)
+            {
+                led.CheckUncheckLeds(false);
+                led.EnableDisableLeds(true);
+            }               
+            else if (ledType == LedType.An)
+            {
+                led.CheckUncheckLeds(true);
+                led.EnableDisableLeds(true);
+            }              
+            else
+            {
+                led.EnableDisableLeds(false);
+            }
         }
 
         private void Connect_InitiateConnection(object sender, System.EventArgs e)
@@ -56,7 +78,13 @@ namespace Birthday
             connectionService = new BluetoothConnectionService(this, adapter, sender as BluetoothDevice);
             connectionService.ConnectionFailed += ConnectionService_ConnectionFailed;
             connectionService.ConnectionSuccessful += ConnectionService_ConnectionSuccessful;
+            connectionService.SignalReceived += ConnectionService_SignalReceived;
             connectionService.Initiate();
+        }
+
+        private void ConnectionService_SignalReceived(object sender, EventArgs e)
+        {
+            
         }
 
         private void ConnectionService_ConnectionSuccessful(object sender, EventArgs e)
