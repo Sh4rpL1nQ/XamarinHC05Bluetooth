@@ -1,12 +1,10 @@
 <resources>
-  <string name="app_name">Projekt</string>
+  <string name="app_name">HC-06 Project</string>
   <string name="title_led_tab">LEDs</string>
-  <string name="title_music_tab">Musik</string>
+  <string name="title_music_tab">Music</string>
 
-  <string name="btn_device_search">Verbinden</string>
-  <string name="btn_bluetooth_off">Aus</string>
-  <string name="btn_bluetooth_on">An</string>
-  <string name="error_no_bluetooth">Das Gerät hat kein Bluetooth</string>
-  <string name="msg_bluetooth_activated">Bluetooth wurde aktiviert</string>
-  <string name="msg_bluetooth_closed">Bluetooth wurde deaktiviert</string>
+  <string name="btn_device_search">Connect</string>
+  <string name="btn_bluetooth_off">Off</string>
+  <string name="btn_bluetooth_on">On</string>
+  <string name="error_no_bluetooth">Device has no bluetooth</string>
 </resources>

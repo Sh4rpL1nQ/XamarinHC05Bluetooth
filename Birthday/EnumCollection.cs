@@ -14,21 +14,21 @@ namespace Birthday
 {
     public enum LedType
     {
-        Aus = 14, 
-        An = 15, 
-        Nacheinander = 16,
-        Blinken = 17,
+        Off = 14, 
+        On = 15, 
+        ReverseSnake = 16,
+        Blink = 17,
         Snake = 18, 
-        Farbe = 19,
-        Zufällig = 20
+        Color = 19,
+        Random = 20
     }
 
     public enum Delay
     {
-        Epilepsie = 21,
-        Schnell = 50,
-        Mittel = 90,
-        Langsam = 140
+        Epilepsy = 21,
+        Fast = 50,
+        Medium = 90,
+        Slow = 140
     }
 
     public enum Music

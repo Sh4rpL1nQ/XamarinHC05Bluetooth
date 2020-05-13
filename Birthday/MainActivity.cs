@@ -71,12 +71,12 @@ namespace Birthday
             Enum.TryParse(sender.ToString(), out LedType ledType);
             connectionService?.WriteToSocket((int)ledType);
 
-            if (ledType == LedType.Aus)
+            if (ledType == LedType.Off)
             {
                 led.CheckUncheckLeds(false);
                 led.EnableDisableLeds(true);
             }               
-            else if (ledType == LedType.An)
+            else if (ledType == LedType.On)
             {
                 led.CheckUncheckLeds(true);
                 led.EnableDisableLeds(true);
