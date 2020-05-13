@@ -10,4 +10,4 @@ A copy of the final apk is provided in the projects root folder.
 The app consists of three parts. The bluetooth connection to the arduino module, controlling the leds and playing some kind of music.
 In order to use the second and thirt part you have to connect to the module.
 
-![Image of Yaktocat](https://github.com/Sh4rpL1nQ/XamarinHC05Bluetooth/images_readme/eins.jpg)
+![Image of Yaktocat](https://github.com/Sh4rpL1nQ/XamarinHC05Bluetooth/tree/master/images_readme/eins.jpg)
